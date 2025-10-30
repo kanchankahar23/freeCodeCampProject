@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To do list</title>
     <link rel="stylesheet" href="/src/output.css">
 </head>
 
-<body class="flex justify-center items-center w-full h-screen">
-    <div class="h-24 w-40 ">
-        <h1 class="bg-blue-800">To DO List</h1>
-        <div>
-            <input type="text" placeholder="Enter the task">
-            <button class="px-2 py-1 rounded bg-amber-950">Add</button>
-        </div>
-        <div >
+<body class="flex justify-center items-center w-full h-screen ">
+  <div class="max-w-w-full bg-[#E9E3DF]/90 p-8 rounded-md shadow-lg backdrop-blur-sm">
+    <h1 class="text-2xl font-semibold text-center mb-5">To-Do List</h1>
 
-        </div>
+    <div class="flex gap-7 mb-4">
+      <input
+        class=" flex  p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-800"
+        type="text"
+        placeholder="Enter the task"
+      />
+      <button
+        class=" add px-4 py-2 rounded bg-amber-950 text-white font-medium hover:bg-amber-900 transition"
+      >
+        Add
+      </button>
     </div>
+
+    <div class=" space-y-2">
+      <!-- Tasks will appear here -->
+       <ul class="tasklist flex justify-around flex-col gap-5">
+    
+       </ul>
+      <p class="notasksyet text-gray-600 text-center italic ">No tasks yet</p>
+    </div>
+  </div>
 </body>
+
 <script src="script.js"></script>
 </html>
