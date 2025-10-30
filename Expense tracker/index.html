@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="/src/output.css">
+</head>
+
+<body class="flex justify-center items-center w-full min-h-screen bg-gray-100">
+  <div class="p-6 sm:p-8 bg-white shadow-md rounded-lg w-[90%] sm:w-[70%] md:w-[50%] lg:w-[35%]">
+    <!-- Header -->
+    <h1 class="text-2xl sm:text-3xl font-bold text-center mb-5">Expense Tracker</h1>
+
+    <!-- Balance Section -->
+    <div class="bg-gray-50 p-4 rounded-md text-center">
+      <h2   class="text-xl sm:text-2xl font-semibold">Your Balance</h2>
+      <h3 id="currentbalance" class="text-2xl sm:text-3xl font-bold mt-1 text-blue-700">$000</h3>
+    </div>
+
+    <!-- Income / Expense Section -->
+    <div class="bg-gray-100 mt-5 flex flex-col sm:flex-row gap-5 sm:gap-10 justify-center p-5 rounded-md text-center">
+      <div class="flex-1">
+        <h2 class="font-bold">INCOME</h2>
+        <h2 id="income" class="text-green-600 font-bold text-2xl">$000.00</h2>
+      </div>
+      <div class="border-t sm:border-t-0 sm:border-l border-gray-400"></div>
+      <div class="flex-1">
+        <h2 class="font-bold">EXPENSE</h2>
+        <h2 id="expense" class="text-red-600 font-bold text-2xl">$00</h2>
+      </div>
+    </div>
+
+    <!-- History Section -->
+    <div class="mt-6">
+      <h2 class="text-2xl font-bold mb-2">History</h2>
+      <hr>
+      <ul id="items" class="bg-gray-50 mt-4 gap-2 p-3 rounded-md">
+        <!-- <li class="flex justify-between text-lg font-semibold">
+          <span>Pizza</span>
+          <span class="text-green-600">+500</span>
+        </li> -->
+      </ul>
+    </div>
+
+    <!-- Add Transaction Section -->
+    <div class="mt-8">
+      <h2 class="text-2xl font-bold mb-2">Add New Transaction</h2>
+      <hr>
+
+      <label  class="block text-lg font-semibold mt-4">Text</label>
+      <input id="text" class="bg-gray-200 p-2 rounded-md w-full mt-2" type="text" placeholder="Enter Text...">
+
+      <label class="block text-lg font-semibold mt-4">Amount</label>
+      <p class="text-sm text-gray-600">(negative - expense, positive - income)</p>
+      <input id="amount" class="bg-gray-200 p-2 rounded-md w-full mt-2" type="number" placeholder="Enter Amount">
+
+      <button id="add" class="w-full py-2 bg-blue-500 text-white font-semibold mt-5 rounded-md hover:bg-blue-600 transition-all">
+        Add Transaction
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
