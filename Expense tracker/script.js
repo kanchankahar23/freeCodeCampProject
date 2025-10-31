@@ -69,7 +69,7 @@ function updateBalance() {
     .filter((item) => item > 0)
     .reduce((acc, item) => acc + item, 0)
     .toFixed(2);
-  const expense =
+  const expense = 
     (amounts.filter((item) => item < 0).reduce((acc, item) => acc + item, 0) * -1).toFixed(2);
 
   balanceEl.textContent = `$${total}`;
@@ -82,3 +82,4 @@ function deleteTransaction(id) {
   renderTransactions();
   updateBalance();
 }
+
